@@ -64,7 +64,9 @@ if (minAsset) {
   const outputString = `${minAsset.txt}:${minAsset.value}`; // Форматування виходу як <назва актива>:<значення>
 
   // Виведення результату в консоль
-  console.log(`${outputString}`); // Виведення найменшого активу
+  if (options.display){
+    console.log(`${outputString}`); // Виведення найменшого активу
+  }
 
   // Запис результату у вихідний файл, якщо вказано параметр -o
   if (options.output) {
@@ -79,3 +81,5 @@ if (minAsset) {
 } else {
   console.log("No assets found with a valid numeric value."); // Повідомлення, якщо активи не знайдені
 }
+
+
